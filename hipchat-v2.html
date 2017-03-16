@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    RED.nodes.registerType('hipchat-v2',{
+        category: 'social',
+        color: '#a6bbcf',
+        defaults: {
+          name: {value:""},
+          apikey: {value:""},
+          roomid: {value:""}
+        },
+        inputs:1,
+        outputs:0,
+        icon: "hipchat.png",
+        label: function() {
+            return this.name||"hipchat-v2";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="hipchat-v2">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apikey"><i class="icon-tag"></i> API key</label>
+        <input type="text" id="node-input-apikey">
+    </div>
+    <div class="form-row">
+        <label for="node-input-roomid"><i class="icon-tag"></i> Room ID</label>
+        <input type="text" id="node-input-roomid">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="hipchat-v2">
+    <p>A node that sends a message via the HipChat v2 API.</p>
+</script>
