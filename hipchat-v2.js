@@ -10,7 +10,7 @@ module.exports = function(RED) {
           if(err != null) node.error(err);
         };
 
-        var hc = new hipchatter(config.apikey);
+        var hc = new hipchatter(config.apikey, config.apiroot);
 
         this.on('input', function(msg) {
           hc.notify(config.roomid, msg.payload, notify_error);
